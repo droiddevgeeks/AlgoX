@@ -61,7 +61,7 @@ public class RodCutting {
         int[][] dp = new int[m][m];
 
         for (int i = m - 1; i >= 0; i--) {
-            for (int j = i + 2; j < m; j++) {
+            for (int j = i + 2; j < m; j++) { //we just need at-least 1 cut between i & j so j = i+2. That’s why rod cutting skips diagonal.
                 int minCost = Integer.MAX_VALUE;
                 for (int k = i + 1; k < j; k++) {
                     int cost = dp[i][k] + dp[k][j] + cuts[j] - cuts[i];
