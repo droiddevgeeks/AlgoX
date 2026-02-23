@@ -37,9 +37,7 @@ public class PalindromePartitioning {
         }
     }
 
-    private static boolean isPalindrome(String s, int start, int i) {
-        System.out.print("---Start--" + start + "---end---" + i);
-        System.out.println("-----SubsString-- " + s.substring(start, i+1));
+    public static boolean isPalindrome(String s, int start, int i) {
         char[] temp = s.toCharArray();
         while (start < i) {
             if (temp[start] != temp[i]) {
