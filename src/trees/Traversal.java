@@ -19,21 +19,21 @@ public class Traversal {
 
     }
 
-    private static void preOrderTraversal(Node root) {
+    public static void preOrderTraversal(Node root) {
         if (root == null) return;
         System.out.print(root.data + "\t");
         preOrderTraversal(root.left);
         preOrderTraversal(root.right);
     }
 
-    private static void inOrderTraversal(Node root) {
+    public static void inOrderTraversal(Node root) {
         if (root == null) return;
         inOrderTraversal(root.left);
         System.out.print(root.data + "\t");
         inOrderTraversal(root.right);
     }
 
-    private static void postOrderTraversal(Node root) {
+    public static void postOrderTraversal(Node root) {
         if (root == null) return;
         postOrderTraversal(root.left);
         postOrderTraversal(root.right);
