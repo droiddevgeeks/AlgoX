@@ -83,7 +83,7 @@ public class CycleDetection {
             for (int nbr : adj.get(node)) {
                 if (!visited[nbr]) {
                     visited[nbr] = true;
-                    queue.add(new int[]{nbr, nbr});
+                    queue.add(new int[]{nbr, node});
                 } else if (nbr != parent) {
                     return true;
                 }
